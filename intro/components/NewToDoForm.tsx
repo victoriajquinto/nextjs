@@ -1,15 +1,12 @@
-'use client'
-
-import { useState } from 'react'
+import { newTodo } from '@/utils/actions'
 
 const NewToDoForm = () => {
-  const [ state, setState ] = useState()
+
   return (
     <div>
-        <form>
-          <input type='text'>
-
-          </input>
+        <form action={newTodo}>
+          <input name='content' type='text' placeholder='buy milk' className='border border-black'/>
+          <button type='submit'>create</button>
         </form>
     </div>
   )
